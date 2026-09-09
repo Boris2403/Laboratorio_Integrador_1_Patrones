@@ -8,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Configura la base de datos SQL Server
 builder.Services.AddDbContext<LibroFacilDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
